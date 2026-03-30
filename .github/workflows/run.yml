@@ -6,6 +6,11 @@ on:
       - main
   schedule:
     - cron: '*/15 * * * *'
+  workflow_dispatch:
+  
+concurrency:
+  group: cf2dns-run
+  cancel-in-progress: false
 
 jobs:
   build:
